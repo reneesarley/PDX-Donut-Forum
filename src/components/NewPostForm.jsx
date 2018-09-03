@@ -8,7 +8,7 @@ function NewPostForm(props){
 
   function handleNewPostFormSubmission(event){
     event.preventDefault();
-    props.onNewPostCreation({postName: _postName.value, postContent: _postContent.value, id: v4()});
+    props.onNewPostCreation({postName: _postName.value, postContent: _postContent.value, points: 0, id: v4()});
     _postName.value= '';
     _postContent.value= '';
   }

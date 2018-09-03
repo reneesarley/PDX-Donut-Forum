@@ -8,13 +8,17 @@ function Forum(props){
         <Post
           postName={post.postName}
           postContent={post.postContent}
+          points={post.points}
           key={post.id}
+          id={post.id}
+          onVoteForPosts={props.onVoteForPosts}
         />
       )}
     </ div>
   );
   Forum.propTypes ={
-    masterPostList: PropTypes.array
+    masterPostList: PropTypes.array,
+    onVoteForPosts: PropTypes.func
   }
 }
 
