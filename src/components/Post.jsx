@@ -1,11 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+let vote = 0;
+
 function Post(props){
   function handleVoteForPostClick(){
-    console.log("click event is working");
     event.preventDefault();
-    props.onVoteForPosts(props.id);
+    props.onVoteForPosts(1, props.id);
+  }
+  function handleDownVoteForPostClick(){
+    event.preventDefault();
+    props.onVoteForPosts(-1, props.id);
   }
 
   return (
@@ -13,7 +18,7 @@ function Post(props){
       <h3>{props.postName}</h3>
       <p>{props.postContent}</p>
       <p>Current Votes: {props.points}</p>
-      <button onClick={handleVoteForPostClick}>Up Vote</button>
+      <button onClick={handleVoteForPostClick} >Up Vote</button>    <button onClick={handleDownVoteForPostClick}>Down Vote</button>
     </div>
   );
 }

@@ -26,7 +26,7 @@ class App extends React.Component {
     console.log(newPost);
   }
 
-  handleVoteForPosts(id){
+  handleVoteForPosts(vote, id){
     console.log('the handleVoteForPosts function is running')
     console.log('the id is ' + id )
     let newMasterPostList = [];
@@ -36,7 +36,7 @@ class App extends React.Component {
       let postToCheckId = currentMasterPostList[i].id;
       if (postToCheckId == id){
         console.log("this is the current point total " + currentMasterPostList[i].points)
-        let newPoints = currentMasterPostList[i].points + 1;
+        let newPoints = currentMasterPostList[i].points + vote;
         currentMasterPostList[i].points = newPoints;
         console.log("the new point total is " + newPoints);
       }
