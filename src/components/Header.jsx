@@ -1,5 +1,5 @@
 import React from 'react';
-import NewPostForm from './NewPostForm';
+// import NewPostForm from './NewPostForm';
 import { Link } from 'react-router-dom';
 
 function Header(){

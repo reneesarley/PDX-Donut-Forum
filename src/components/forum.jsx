@@ -1,5 +1,6 @@
 import React from 'react';
 import Post from './Post';
+import PropTypes from 'prop-types';
 
 function Forum(props){
   return (
@@ -16,10 +17,10 @@ function Forum(props){
       )}
     </ div>
   );
-  Forum.propTypes ={
-    masterPostList: PropTypes.array,
-    onVoteForPosts: PropTypes.func
-  }
 }
+Forum.propTypes ={
+  masterPostList: PropTypes.array,
+  onVoteForPosts: PropTypes.func
+};
 
 export default Forum;
